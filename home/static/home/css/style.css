@@ -1,0 +1,31 @@
+#nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+  }
+   
+  #nav li {
+    width: 140px;
+    text-align: center;
+    display: inline-block;
+  }
+   
+  #nav li a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+   
+  
+
+body {
+    color: brown;
+}
+
+h1 {color: coral;
+
+}
+p {
+    color: darkmagenta;
+}
+  
