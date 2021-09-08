@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Post
+from .models import Post, Movie
 from django.core.paginator import Paginator
 
 def index(request):
@@ -10,12 +10,18 @@ def index(request):
     }
     return render(request, 'home/index.html', params)
 
-def works(request):
+def works(request, num=1):
+    date = Movie.objects.all().order_by('published_date').reverse()
+    page = Paginator(date, 3)
     params ={
         'title':'works',
         'msg':'workpagedesu.',
+        'date':page.get_page(num)
     }
     return render(request, 'home/works.html', params)
+
+    
+
 
 def about(request):
     params ={

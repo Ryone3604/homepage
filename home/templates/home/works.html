@@ -1,7 +1,60 @@
 {% extends 'home/index.html' %}
 {% block content %}
+{% for item in date %}
+<table class="table" >
+    <div class="container" style=" padding: 50px 0px;">
     <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item"
-        src="https://www.youtube.com/embed/rXVlRwXytHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        src="{{ item.text}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
     </div>
+    <h2> {{item.title}}</h2>
+    </div>
+    
+{% endfor %}
+
+    
+
+    <ul class="pagination">
+        <li class="page-item ">
+            <a class="page-link" >
+            {{ date.number}}/{{ date.paginator.num_pages}}</a>
+        </li>
+        {% if date.has_previous %}
+        <li class="page-item a">
+            <a class="page-link" href="{% url 'works' %}">
+                &laquo;</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" 
+            href="{% url 'works' %}{{date.previous_page_number}}">
+                {{date.previous_page_number}}</a>
+        </li>
+        {% else %}
+        
+        {% endif %}
+        <li class="page-item now">
+            <a class="page-link">
+            {{ date.number}}</a>
+        </li>
+        {% if date.has_next %}
+        <li class="page-item">
+            <a class="page-link" 
+            href="{% url 'works'  %}{{date.next_page_number}}">
+                {{date.next_page_number}}</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" 
+            href="{% url 'works' %}{{date.paginator.num_pages}}">
+                &raquo;</a>
+        </li>
+        {% else %}
+        
+        {% endif %}
+    </ul>
+
+       
+    
+</table>
+
 {% endblock %}

@@ -1,31 +1,118 @@
-#nav {
+#nav.ue {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    font-size: 30px;
+    font-size: 20px;
+    flex-wrap: wrap;
+    
+    
+    
   }
    
-  #nav li {
-    width: 140px;
-    text-align: center;
-    display: inline-block;
-  }
+        #nav.ue li {
+          width: 100px;
+          height: 40px;
+          text-align: center;
+          display: inline-block;
+        }
    
-  #nav li a {
+  #nav.ue li a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: lighter;
+    color: rgb(44, 44, 51);
   }
+  #nav.ue li a:hover{
+    color: rgb(180, 178, 178);
+  }
+
+#logo {
+  display: flex;
+  justify-content: flex-start;
+  
+}
+#logo a {
+  color: rgb(44, 44, 51);
+}
+
+  
    
   
 
-body {
-    color: brown;
+
+.contents{
+  padding: 20px 0px;
 }
 
-h1 {color: coral;
+#title {
+  font-family: "Yu Gothic" , "YuGothic" ,"sans-serif";
+  font-size: 50px;
+  font-weight: 100;
 
 }
-p {
-    color: darkmagenta;
+p {font-weight:lighter;
 }
+
+.pagination{
+  padding: 100px ;
   
+}
+.pagination>li>a{
+  border-radius: 0;
+}
+
+
+.page-link{
+  color: rgb(44, 44, 51);
+  
+}
+
+
+.pagination>li> a{
+  color: rgb(44, 44, 51);
+  border: 0px none;
+  border-radius: 0px none;
+  
+}
+.pagination>li.now> a{
+ font-weight: 700;
+ 
+
+  
+}
+
+
+
+.pagination>li> a:hover{
+  color: rgb(180, 178, 178);
+  background-color: transparent;
+}
+.pagination>li.disabled> a{
+  color: rgb(228, 118, 15);
+}
+
+#nav.sita {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  flex-wrap: wrap;
+  
+  
+  
+}
+ 
+      #nav.sita li {
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        display: inline-block;
+      }
+ 
+#nav.sita li a {
+  text-decoration: none;
+  font-weight: lighter;
+  color: rgb(44, 44, 51);
+}
+#nav.sita li a:hover{
+  color: rgb(180, 178, 178);
+}

@@ -3,7 +3,7 @@
 <htlm lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>{{title}}</title>
+    
     
     <link rel="stylesheet" type="text/css"
         href="{% static 'home/css/style.css' %}"/>
@@ -12,14 +12,16 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
 
+
+<body>
+<div class="container" style=" padding: 80px 80px;">
+  
     <div class="page-header">
-    <h1 id="logo"><a href="http://127.0.0.1:8000/home/">Acerola</a></h1>
+    <h1 id="logo" style=" padding: 20px 0px;"><a href="http://127.0.0.1:8000/home/">Acerola</a></h1>
     
-        <ul id="nav">
+        <ul id="nav" class="ue" style=" padding: 20px 0px;">
             
             <li><a href="http://127.0.0.1:8000/home/about/">about</a></li>
             <li><a href="http://127.0.0.1:8000/home/works/">works</a></li>
@@ -29,20 +31,42 @@
         </ul>
     </div>
     
-</head>
-<body>
-    <div class="page-header">
-    <h1>{{title}}</h1>
+
+
+    <div class="page-header" style=" padding: 10px 0px;">
+    <h1 id="title">{{title}}</h1>
     <p>{{msg}}</p>
     </div>
-    <div class="content container">
+    <div class="contents">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
 
     {% block content %}{% endblock %}
             </div>
         </div>
     </div>
+
+    <div class="page-footer ">
+    
+    
+        <ul id="nav" class="sita" style=" padding: 20px 0px;">
+            
+            <li><a href="http://127.0.0.1:8000/home/about/">about</a></li>
+            <li><a href="http://127.0.0.1:8000/home/works/">works</a></li>
+            <li><a href="http://127.0.0.1:8000/home/blog/">blog</a></li>
+            <li><a href="http://127.0.0.1:8000/home/contact/">contact</a></li>
+            
+        </ul>
+    </div>
+
+
+</div>
+
+
+
+
+
+
     
 </body>
 </html>

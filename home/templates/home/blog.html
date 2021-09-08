@@ -2,7 +2,7 @@
 {% block content %}
     <table class="table">
     {% for item in date %}
-        <div class="post">
+        <div class="post" style=" padding: 50px 0px;">
             <div class="date">
                 {{ item.published_date }}
             </div>
@@ -13,50 +13,40 @@
     {% endfor %}
 
     <ul class="pagination">
+        <li class="page-item ">
+            <a class="page-link" >
+            {{ date.number}}/{{ date.paginator.num_pages}}</a>
+        </li>
         {% if date.has_previous %}
-        <li class="page-item">
+        <li class="page-item a">
             <a class="page-link" href="{% url 'blog' %}">
-                &laquo; first</a>
+                &laquo;</a>
         </li>
         <li class="page-item">
             <a class="page-link" 
             href="{% url 'blog' %}{{date.previous_page_number}}">
-                &laquo; prev</a>
+                {{date.previous_page_number}}</a>
         </li>
         {% else %}
-        <li class="page-item">
-            <a class="page-link" >
-                &laquo; first</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" >
-                &laquo; prev</a>
-        </li>
+        
         {% endif %}
-        <li class="page-item">
+        <li class="page-item now">
             <a class="page-link">
-            {{ date.number}}/{{ date.paginator.num_pages}}</a>
+            {{ date.number}}</a>
         </li>
         {% if date.has_next %}
         <li class="page-item">
             <a class="page-link" 
             href="{% url 'blog'  %}{{date.next_page_number}}">
-                next &raquo;</a>
+                {{date.next_page_number}}</a>
         </li>
         <li class="page-item">
             <a class="page-link" 
             href="{% url 'blog' %}{{date.paginator.num_pages}}">
-                last &raquo;</a>
+                &raquo;</a>
         </li>
         {% else %}
-        <li class="page-item">
-            <a class="page-link" >
-                next &raquo;</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" >
-                last &raquo;</a>
-        </li>
+        
         {% endif %}
     </ul>
 
