@@ -189,3 +189,9 @@ p {font-weight:lighter;
   text-align: right;
 }
   
+#post img {
+  width: 100%;
+  
+  height: auto;
+}
+

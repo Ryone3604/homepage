@@ -10,7 +10,7 @@ def index(request, num=1):
     date = Movie.objects.all().order_by('published_date').reverse()
     date2 = Post.objects.all().order_by('published_date').reverse()
     page = Paginator(date, 5)
-    page2 = Paginator(date2, 1)
+    page2 = Paginator(date2, 4)
     params ={
         'title':'Top',
         'msg':'toppagedesu.',
