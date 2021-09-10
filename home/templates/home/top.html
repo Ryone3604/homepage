@@ -1,0 +1,73 @@
+{% extends 'home/index.html' %}
+{% block content %}
+
+<div id="mainVisual">
+    <img src="../../static/home/image/homepagep.jpg" alt="つくるものを通して人と人がつながり 新しい価値が生まれ、気持ちや想いが届く。 そんなお手伝いができればと考えています。">
+</div>
+
+<div style=" padding: 100px 0px;">
+<table class="table" >
+    <h1 id="title" class="toptext "><a href="http://127.0.0.1:8000/home/works/" class="text-decoration-none">Music</a></h1>
+    <div class="container topmove" style=" padding: 50px 0px;">
+    {% for item in date %}
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" style=" padding: 10px 10px;"
+        src="{{ item.text}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    </div>
+    
+    {% endfor %}
+    </div>
+    
+</table>
+</div>
+
+
+<div style=" padding: 100px 0px;">
+<table class="table" >
+    <h1 id="title" class="toptext"><a href="http://127.0.0.1:8000/home/blog/"class="text-decoration-none">Blog</a></h1>
+    <div class="container topblog" style=" padding: 10px 0px;">
+    {% for item in date2 %}
+        <div class="post" style=" padding: 10px 0px;">
+            <div class="date">
+                {{ item.published_date }}
+            </div>
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.text|linebreaksbr }}</p>
+            
+        </div>
+    {% endfor %}
+</table>
+</div>
+
+
+<div style=" padding: 100px 0px;">
+
+    <h1 id="title" class="toptext "><a href="http://127.0.0.1:8000/home/works/" class="text-decoration-none">Music</a></h1>
+    <div class="container topmove" style=" padding: 10px 0px;">
+    <ul id="top">
+    {% for item in date %}
+    <li id="top2">
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" style=" padding: 10px 10px;"
+        src="{{ item.text}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    </div>
+    </li>
+    {% endfor %}
+    <ul>
+    </div>
+    
+
+</div>
+
+
+
+
+
+    
+
+
+
+
+{% endblock %}

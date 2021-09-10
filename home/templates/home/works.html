@@ -8,7 +8,7 @@
         src="{{ item.text}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
     </div>
-    <h2> {{item.title}}</h2>
+    <h2><a href="{% url 'works' %}{{ item.url }}" id="link" class="text-decoration-none">{{ item.title }}</a></h2>
     </div>
     
 {% endfor %}

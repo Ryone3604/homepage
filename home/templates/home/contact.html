@@ -1,0 +1,28 @@
+{% extends 'home/index.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+
+
+
+<form  method="post">
+     {% csrf_token %}
+     {{ form.non_field_errors }}
+     
+     {% for field in form %}
+       <div style=" padding: 20px 0px;">
+         <label for="{{ field.id_for_label }}" id="tii">
+           {{ field.label_tag }}
+         </label>
+         <div >
+           {{ field }}
+           {{ field.errors }}
+         </div>
+       </div>
+     {% endfor %}
+     <button  type="submit" class="btn btn-secondary ">送信</button> 
+   </form>
+
+
+
+{% endblock %}

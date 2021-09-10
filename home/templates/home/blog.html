@@ -3,10 +3,11 @@
     <table class="table">
     {% for item in date %}
         <div class="post" style=" padding: 50px 0px;">
-            <div class="date">
-                {{ item.published_date }}
-            </div>
-            <h2>{{ item.title }}</h2>
+            <p class="date" id="date">
+                {{ item.published_date |date:"Y.m.d"}}
+            </p>
+            <h2><a href="{% url 'blog' %}{{ item.url }}" id="link" class="text-decoration-none">{{ item.title }}</a></h2>
+            
             <p>{{ item.text|linebreaksbr }}</p>
             
         </div>

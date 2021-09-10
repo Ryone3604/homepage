@@ -33,6 +33,9 @@
 #logo a {
   color: rgb(44, 44, 51);
 }
+#logo a:hover{
+  color: rgb(180, 178, 178);
+}
 
   
    
@@ -51,6 +54,7 @@
 }
 p {font-weight:lighter;
 }
+
 
 .pagination{
   padding: 100px ;
@@ -116,3 +120,72 @@ p {font-weight:lighter;
 #nav.sita li a:hover{
   color: rgb(180, 178, 178);
 }
+
+
+
+#tii {
+  font-family: "Yu Gothic" , "YuGothic" ,"sans-serif";
+  font-size: 15px;
+  font-weight: 100;
+
+}
+
+.topmove {
+  display:flex;
+  /* 追記 */
+  justify-content:center;
+}
+
+.topblog {
+  display:flex;
+  /* 追記 */
+  justify-content:center;
+}
+
+.toptext{
+  text-align: center
+}
+
+.toptext a {
+  color: rgb(44, 44, 51);
+  text-decoration: none;
+}
+
+.toptext a:hover{
+  color: rgb(180, 178, 178);
+}
+
+
+#mainVisual img {
+  width: 100%;
+  
+  height: auto;
+}
+
+#top{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  padding: 0px;
+  
+}
+#top2{
+  width: 490px;
+  text-align: center;
+  
+}
+
+#link  {
+    color: rgb(44, 44, 51);
+    text-decoration: none;
+  }
+  
+#link:hover{
+    color: rgb(180, 178, 178);
+  }
+
+#date{
+  text-align: right;
+}
+  
